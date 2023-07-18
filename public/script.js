@@ -1,4 +1,4 @@
-const url = 'https://crudcrud.com/api/3319960d951548a6ac459d8ff4627a66';
+const url = 'http://localhost:3000';
 let foodList = document.getElementById('foodList');
 let clotesList = document.getElementById('clothesList');
 let screencareList = document.getElementById('screenCareList');
@@ -32,17 +32,17 @@ function remove(id) {
         .then(res => console.log(res))
         .catch(err => console.log(err));
 }
-function print({ _id, price, item, category }) {
-    console.log(_id, price, item, category);
+function print({ id, price, item, category }) {
+    console.log(id, price, item, category);
     let ele = `
-                    <div class="row-12" id="${_id}">
+                    <div class="row-12" id="${id}">
                         <label for="price">Price:</label>
                         <label for="price">${price}</label>
                         <label for="item">  Item: </label>
                         <label for="item">${item}</label>
                         <label for="category">  Category: </label>
                         <label for="category">${category}</label>
-                        <button type="button" onclick="remove(`+ `'${_id}'` + `)">Delete</button>
+                        <button type="button" onclick="remove(`+ `'${id}'` + `)">Delete</button>
                     </div>
             `;
     if (category == 'food')
