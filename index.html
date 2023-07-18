@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form  method="post" onsubmit="save(); return false;">
+        <label for="price"></label>
+        <input type="number" name="price" id="price" required>
+        <label for="itemName"></label>
+        <input type="text" name="item" id="item" required>
+        <select name="category" id="category" required>
+            <option value>category</option>
+            <option value="food">food</option>
+            <option value="clothes">clothes</option>
+            <option value="screenCare">screenCare</option>
+        </select>
+        <button type="submit">submit</button>
+    </form>
+    <div id="foodList"><h3>List of food</h3></div>
+    <div id="clothesList"><h3>List of clothes</h3></div>
+    <div id="screenCareList"><h3>List of screenCares</h3></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
